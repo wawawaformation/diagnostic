@@ -1,0 +1,41 @@
+@import url(fonts/fonts.css);
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Text', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-x-light);
+    line-height: 150%;
+}
+
+p{
+    margin:0;
+    margin-bottom: .4rem;
+}
+
+a{
+    color: var(--color-primary);
+    font-size: 700;
+}
+
+
+a:hover{
+    color: var(--color-success);
+}
+
+
+h2,h3,h4,h5,h6{
+    font-family: 'Titre', 'Courier New', Courier, monospace;
+    font-weight: 400;
+}
+
+
+
+@media screen and (max-width: 1180px) {
+    html{
+        font-size: 14px;
+    }
+}

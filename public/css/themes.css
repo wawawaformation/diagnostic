@@ -1,0 +1,42 @@
+#header{
+    background-color: var(--color-primary);
+}
+
+.flip{
+ 
+    transform:  translateX(-1rem) scaleX(-1);
+    
+}
+
+.read-more a{
+    font-size: 1.125rem;
+}
+
+
+.titre-section{
+    font-size: 1.68rem;
+    margin-bottom: 1rem;
+}
+
+.titre-soussection{
+    margin-top:0;
+    font-size: 1.31rem;
+}
+
+.titre-paragraphe{
+    margin-top: 0;
+    margin-bottom: .8rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+
+
+.job{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+section.recommandation{
+    margin-bottom: 2rem;
+}

@@ -1,0 +1,254 @@
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+Header Footer
+=============================================================================*/
+#header{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header a, #footer a{
+    color: var(--color-x-light);
+    text-decoration: none;
+}
+
+#logo{
+    width: 50px;
+    fill: var(--color-x-light);
+}
+h1 #logo .yeux circle{
+    fill: var(--color-primary);
+}
+
+
+h1 #logo .yeux rect{
+    fill: none;
+}
+
+h1:hover #logo .yeux rect{
+    fill: var(--color-primary);
+}
+
+h1:hover #logo .yeux circle.droite{
+    fill: none;
+}
+h1{
+    margin:0;
+}
+
+
+h1 a{
+    display: flex;
+    align-items: stretch;
+    gap: .4rem;
+    font-size: 2rem;
+    
+    font-weight: 300;
+    text-transform: uppercase;
+   
+}
+
+h1 a div{
+  
+    display: flex;
+    flex-direction: column;
+
+}
+
+h1 a div span:last-child{
+    align-self: flex-end;
+}
+
+h1 a div span:last-child, h1 a div span:first-child{
+    font-size: .8rem;
+}
+
+/*Menu*/
+.menu{
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1.2rem;
+    font-size: 1.125rem;
+}
+
+.menu-principal a{
+    display: block;
+    padding: .8rem 0;
+    
+    transform: translateY(4px);
+}
+
+.menu-principal li{
+    border-bottom: 2px solid transparent;
+}
+
+.menu-principal li:hover, .menu-principal li.active{
+    border-bottom: 2px solid var(--color-x-light);
+}
+
+
+
+#footer{
+    background-color: var(--color-primary);
+    margin-top: 3rem;
+}
+
+#footer nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    padding: 1rem;
+}
+
+
+#footer nav ul{
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+/*=============================================================================
+CTA
+=============================================================================*/
+a.cta.tel{
+    color: var(--color-success);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    border: 2px solid var(--color-success);
+    text-align: center;
+    border-radius: .5rem;
+    padding: .6rem;
+}
+
+a.cta.tel p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/*=============================================================================
+Formulaire
+=============================================================================*/
+input{
+    border-radius: .5rem;
+}
+
+
+input[type="submit"]{
+    width: 100%;
+    border: 0;
+    background-color: var(--color-primary);
+    color: var(--color-x-light);
+    cursor: pointer;
+    padding: .8rem;
+}
+input[type="submit"]:hover{
+    background-color: var(--color-success);
+}
+
+input[type="text"],input[type="email"],input[type="tel"], textarea{
+    border: unset;
+    background-color: transparent;
+    box-shadow: var(--color-text) 0 0 2px ;
+}
+
+::placeholder{
+    font-style: italic;
+}
+
+
+
+/*=============================================================================
+REcommandations
+=============================================================================*/
+.recommandation .profil img {
+    border-radius: 50%;
+    margin-right: .6rem;
+}
+
+@media screen and (max-width: 1140px) {
+    #footer nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #footer nav ul.menu{
+        align-self: stretch;
+        display: flex;
+        justify-content: center;
+      
+    }
+
+    #footer nav ul.menu:not(:last-child){
+        margin-bottom: 1rem;
+    }
+    
+    
+    #footer nav ul.menu img{
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+
+@media screen and (max-width: 620px) {
+    #header{
+        flex-direction: column;
+    }
+
+    #header nav{
+        align-self: stretch;
+    }
+
+    .menu{
+        margin: .6rem 0;
+    }
+
+    .menu.menu-principal{
+        gap: 0;
+        justify-content: space-between;
+
+    }
+    .menu-principal li, .menu-principal li:hover, .menu-principal li.active{
+        border-bottom: unset;
+    }
+
+    .menu-principal a{
+        padding: 0;
+    }
+
+    h1{
+        transform: scale(.8);
+    }
+
+
+    @media screen and (max-width: 380px) {
+        .menu{
+            margin: .4rem;
+            font-size: 1rem;
+        }
+
+        h1{
+            transform: scale(.7);
+        }
+    }
+}

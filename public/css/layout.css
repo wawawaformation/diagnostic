@@ -1,0 +1,112 @@
+*{ /*Etre plus précis*/
+    box-sizing: border-box;
+}
+
+/*=============================================================================
+Quelques classes de layout
+=============================================================================*/
+.wrapper{
+    width: 1140px;
+    margin:auto;
+}
+
+
+.section-generale{
+    margin-top: 3rem;
+}
+
+.soussection{
+    margin-top: 2rem;
+}
+
+.flotant-gauche{
+    display: block;
+    float: left;
+    padding: 0 1rem .6rem 0
+}
+
+.flotant-arret{
+    clear: both;
+}
+
+/*Les flex */
+.flex{
+    display: flex;
+}
+
+.justify-between{
+    justify-content: space-between;
+    
+}
+
+.align-start{
+    align-items: flex-start;
+}
+
+.w48{
+    width: 48%;
+}
+
+
+/*=============================================================================
+Formulaire
+=============================================================================*/
+.fields label{
+    display: block;
+    margin-bottom: .4rem;
+}
+.field{
+    margin-bottom: 1.4rem;
+}
+.fields{
+    margin-top: 2rem;
+}
+
+input[type="text"],input[type="email"],input[type="tel"], textarea{
+    width: 100%;
+    border-radius: .25rem;
+    padding: .6rem .4rem;
+}
+
+textarea{
+    min-height: 6rem; 
+}
+.submit{
+    margin-top: 2rem;
+}
+.submit div{
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1180px) {
+    .wrapper{
+        width: auto;
+        padding: 0 1.2rem;
+    }
+
+    .section-generale{
+        margin-top: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 920px) {
+   .flex{
+        flex-direction: column;
+   }
+   .w48{
+    width: 100%;
+   }
+   .order1{
+    order: -1;
+   }
+   .col{
+    margin-bottom: 2rem;
+   }
+}
