@@ -3,7 +3,7 @@
  * reWriteNav : réécrit les liens du menu selon la taille du display
  */
 reWriteNav = ()=>{
-    console.log()
+    
     if(window.matchMedia("(max-width: 920px)").matches){
         
         document.querySelector('#header .titres-pro a').textContent = "Titres pro"

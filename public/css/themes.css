@@ -40,3 +40,12 @@
 section.recommandation{
     margin-bottom: 2rem;
 }
+
+.error {
+    border-color: var(--color-error);
+}
+
+.error-message {
+    color: var(--color-error);
+    font-size: 0.9em;
+}

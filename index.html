@@ -4,7 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Une description d'une 150taine de caractères convenant des mots-clefs. Chaque page a une description qui lui est propre">
     <title>Les acteurs du web</title><!--pas de titre de page pour l'accueil-->
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Les acteurs du web - David Legrand, formateur professionnel">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://demo.lesacteursduweb.fr">
+    <meta property="og:description" content="Formateur professionnel en informatique, web et numérique à Angoulême, offrant des formations personnalisées et des certifications valorisées sur le marché.">
+    <meta property="og:image" content="https://demo.lesacteursduweb.fr/public/images/les-acteurs-du-web.png">
+    <meta property="og:site_name" content="Les acteurs du web">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Dublin Core Metadata -->
+    <meta name="DC.title" content="Les acteurs du web - David Legrand, formateur professionnel">
+    <meta name="DC.creator" content="David Legrand">
+    <meta name="DC.subject" content="Formation professionnelle en informatique, web et numérique">
+    <meta name="DC.description" content="Site professionnel de David Legrand, formateur en informatique, web et numérique à Angoulême.">
+    <meta name="DC.publisher" content="David Legrand">
+    <meta name="DC.contributor" content="David Legrand">
+    <meta name="DC.date" content="2024-07-14">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.identifier" content="https://www.example.com">
+    <meta name="DC.language" content="fr">
+    <meta name="DC.coverage" content="Angoulême, Charente, France">
+    <meta name="DC.rights" content="David Legrand">
+
     <link rel="shortcut icon" href="favicon.png" type="image/png">
     <!-- Attention à bien réunir tout le CSS dans un seul fichier lors du déploiement et de minifier -->
     <link rel="stylesheet" href="public/css/normalyse.css">
@@ -17,11 +43,12 @@
 </head>
 
 <body>
-    <header id="header">
+    <header id="header" role="banner">
         <h1>
-            <a href="index.html">
+            <a href="index.html" aria-label="Page d'accueil">
 
-                <svg id="logo" viewBox="0 0 460 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg id="logo" viewBox="0 0 460 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle">
+                    <title id="logoTitle">Logo des acteurs du web</title>
                     <g class="tete">
                         <path class="fond" fill-rule="evenodd" clip-rule="evenodd"
                             d="M200.929 29.5787C210.224 28.0592 216.794 27.588 229.625 27.5522L229.698 27.552C242.529 27.5878 249.099 28.0592 258.394 29.5787C265.163 30.6853 271.02 31.7871 271.408 32.0272C271.797 32.2673 275.682 33.4976 280.043 34.7613C284.404 36.025 288.881 37.6488 289.991 38.3698C291.102 39.0908 293.871 40.3063 296.144 41.0711C298.418 41.8358 302.009 42.737 304.125 43.0737C307.57 43.6221 308.227 43.411 310.417 41.0518C311.692 39.6788 313.47 37.2323 314.164 35.672L314.127 35.581C332.684 5.57458 347.961 -2.09198 384.855 0.455196C403.636 1.76924 426.227 13.0786 443.118 33.3959C456.136 49.0583 460.296 65.0577 459.139 78.4342C457.971 85.519 454.267 88.0372 449.476 90.5429C444.937 92.9788 438.584 93.3439 432.741 92.9844C432.35 92.9798 431.961 92.9102 431.571 92.8405L431.477 92.8237L431.388 92.8081C431.36 92.8031 431.331 92.7981 431.302 92.7932C431.198 92.7755 431.094 92.7589 430.989 92.7446C437.984 101.898 444.259 115.581 438.981 124.155C436.161 129.683 425.466 129.852 419.039 129.412C415.034 129 411.119 128.004 407.374 126.79C410.074 131.724 411.679 137.449 407.955 141.577C407.701 141.867 407.448 142.084 407.195 142.301C406.69 142.66 406.184 143.021 405.597 143.233C404.256 143.657 402.752 143.712 401.334 143.476C392.821 142.866 382.724 134.628 375.864 128.256C376.66 131.704 376.868 135.366 375.334 137.981C375.079 138.418 374.656 138.852 374.151 139.212C373.645 139.572 372.974 139.857 372.387 139.996C370.881 140.199 369.379 140.108 367.88 139.725C367.402 139.589 366.934 139.439 366.475 139.277L366.628 139.785C366.679 139.954 366.729 140.123 366.78 140.29C368.292 145.297 370.023 153.318 370.627 158.115C371.291 163.392 371.511 171.586 371.184 178.863C370.774 187.992 370.058 192.878 368.21 199.149C366.872 203.692 364.362 209.892 362.634 212.927C360.906 215.961 359.188 218.899 358.818 219.454L355.73 224.08C354.402 226.069 349.381 231.401 344.571 235.929C339.007 241.168 332.325 246.274 326.199 249.97C320.615 253.338 311.606 257.649 304.751 260.232C298.249 262.681 287.763 265.789 281.448 267.136C275.134 268.484 263.767 270.328 256.19 271.234C248.817 272.115 237.074 272.882 229.698 272.972L229.685 272.973L229.68 272.973L229.678 272.973C229.673 272.973 229.667 272.973 229.662 272.973L229.625 272.973C222.249 272.883 210.507 272.115 203.134 271.234C195.556 270.328 184.19 268.484 177.875 267.136C171.56 265.789 161.074 262.681 154.573 260.232C147.717 257.649 138.708 253.338 133.124 249.97C126.998 246.274 120.316 241.168 114.752 235.929C109.942 231.401 104.921 226.069 103.594 224.08C102.266 222.092 100.877 220.01 100.506 219.454C100.135 218.899 98.4175 215.961 96.6892 212.927C94.9609 209.892 92.4516 203.692 91.113 199.149C89.2654 192.878 88.5491 187.992 88.139 178.863C87.8121 171.586 88.0322 163.392 88.6964 158.115C89.3002 153.318 91.0313 145.297 92.5434 140.29C92.6446 139.955 92.7464 139.617 92.8484 139.277C92.3892 139.439 91.9208 139.589 91.4436 139.725C89.9446 140.108 88.442 140.199 86.936 139.996C86.3497 139.857 85.6781 139.572 85.1727 139.212C84.6674 138.852 84.2447 138.418 83.9891 137.981C82.4552 135.366 82.6637 131.704 83.4593 128.256C76.5992 134.628 66.5028 142.866 57.9891 143.476C56.5717 143.712 55.0674 143.657 53.7261 143.233C53.139 143.02 52.6333 142.66 52.128 142.301C51.8749 142.084 51.6218 141.867 51.3679 141.577C47.6448 137.449 49.2495 131.724 51.9493 126.79C48.2042 128.004 44.2894 129 40.2845 129.412C33.8573 129.852 23.1627 129.683 20.3424 124.155C15.0643 115.581 21.3389 101.898 28.3339 92.7446C28.1402 92.7712 27.9465 92.8058 27.7528 92.8404C27.3629 92.9101 26.9729 92.9798 26.5824 92.9844C20.739 93.3439 14.3861 92.9788 9.84705 90.5429C5.05665 88.0372 1.35203 85.519 0.184396 78.4342C-0.972196 65.0577 3.1873 49.0583 16.2054 33.3959C33.0961 13.0786 55.6876 1.76924 74.468 0.455196C111.362 -2.09198 126.639 5.57458 145.196 35.581L145.159 35.672C145.853 37.2323 147.632 39.6788 148.906 41.0518C151.096 43.411 151.753 43.6221 155.199 43.0737C157.315 42.737 160.906 41.8358 163.179 41.0711C165.452 40.3063 168.221 39.0908 169.332 38.3698C170.443 37.6488 174.919 36.025 179.28 34.7613C183.641 33.4976 187.527 32.2673 187.915 32.0272C188.304 31.7871 194.16 30.6853 200.929 29.5787ZM205.814 149.852C211.95 138.486 219.75 131.77 227.927 130.794C229.618 130.599 229.66 130.599 231.323 130.778C237.236 131.428 242.435 134.599 247.509 140.632C251.199 145.039 254.023 149.836 256.679 156.243C259.768 163.707 261.766 172 262.535 180.488C262.843 183.935 262.843 190.066 262.521 193.139C262.116 197.156 261.459 200.668 260.48 203.985C256.078 219.076 245.678 229.125 232.861 230.637C230.722 230.897 226.445 230.735 224.418 230.312C220.365 229.483 217.038 228.068 213.697 225.759C207.575 221.531 203.102 215.514 200.069 207.368C195.163 194.261 195.526 177.333 201.048 160.861C201.984 158.048 204.416 152.454 205.814 149.852Z" />
@@ -43,185 +70,115 @@
                 </div>
             </a>
         </h1>
-        <nav>
+        <nav aria-label="Menu principal">
             <ul class="menu menu-principal">
                 <li class="item titres-pro"><a href="#">Titres professionnels</a></li>
                 <li class="item formations-courtes"><a href="#">Formations courtes</a></li>
                 <li class="item formations-salaries"><a href="#">Formations en entreprise</a></li>
                 <li class="item papotages"><a href="#">Papotages</a></li>
-
             </ul>
         </nav>
     </header>
     <main id="main">
-        <header class="wrapper section-generale">
-            Bienvenue sur mon site professionnel ! Je suis un formateur professionnel pour adultes basé à Angoulême,
-            Charente, spécialisé dans les domaines de l'informatique,
-            du web, et du numérique. Avec une riche expérience dans l'enseignement et le développement de projets
-            digitaux, je me consacre à la formation et à
-            l'accompagnement des adultes souhaitant acquérir de nouvelles compétences ou se perfectionner dans le
-            domaine du numérique.
+        <header class="wrapper section-generale" role="banner">
+            <h2 id="bienvenue">Bienvenue sur mon site professionnel !</h2>
+            <p>Je suis un formateur professionnel pour adultes basé à Angoulême, Charente, spécialisé dans les domaines de l'informatique, du web, et du numérique. Avec une riche expérience dans l'enseignement et le développement de projets digitaux, je me consacre à la formation et à l'accompagnement des adultes souhaitant acquérir de nouvelles compétences ou se perfectionner dans le domaine du numérique.</p>
         </header>
 
-        <section class="wrapper section-generale">
-            <h2 class="titre-section">
-                David LEGRAND, formateur professionnel pour adulte
-            </h2>
+        <section class="wrapper section-generale" role="region" aria-labelledby="section-titres-pro">
+            <h2 id="section-titres-pro" class="titre-section">David LEGRAND, formateur professionnel pour adulte</h2>
             <div class="contenu-section moi">
-                <img class="flotant-gauche flip" src="public/images/david-legrand.webp" alt="" width="117" height="117">
+                <img class="flotant-gauche flip" src="public/images/david-legrand.webp" alt="Portrait de David Legrand" width="117" height="117">
                 <div>
-                    <p>
-                        Je suis convaincu que chaque apprenant mérite une formation de qualité adaptée à ses besoins.
-                        Mon parcours riche et varié me permet de
-                        proposer des formations pratiques, personnalisées et en phase avec les évolutions du marché. En
-                        tant que formateur référent, chargé de projets
-                        digitaux et auto-entrepreneur, j'ai développé une expertise approfondie dans la formation des
-                        adultes et la conduite de projets numériques.
-                        <br>
-                        Avec une riche expérience dans l'enseignement et le développement de projets digitaux, j'ai
-                        formé de nombreux apprenants.
-                    </p>
-                    <p class="read-more"><a href="">En savoir plus sur mon profil</a></p>
+                    <p>Je suis convaincu que chaque apprenant mérite une formation de qualité adaptée à ses besoins. Mon parcours riche et varié me permet de proposer des formations pratiques, personnalisées et en phase avec les évolutions du marché. En tant que formateur référent, chargé de projets digitaux et auto-entrepreneur, j'ai développé une expertise approfondie dans la formation des adultes et la conduite de projets numériques.<br>Avec une riche expérience dans l'enseignement et le développement de projets digitaux, j'ai formé de nombreux apprenants.</p>
+                    <p class="read-more"><a href="#">En savoir plus sur mon profil</a></p>
                 </div>
-
             </div>
         </section>
 
-        <section class="wrapper section-generale">
-            <h2 class="titre-section">
-                Titres professionnels
-            </h2>
+        <section class="wrapper section-generale" role="region" aria-labelledby="section-titres-pro">
+            <h2 id="section-titres-pro" class="titre-section">Titres professionnels</h2>
             <div class="contenu-section">
-
                 <div>
-                    <p>
-                        Mes compétences en développement web, en design, et en conception d'applications ont permis à
-                        mes apprenants d'acquérir des certifications valorisées sur le marché du travail. Je collabore
-                        étroitement avec des organismes de formation sur Angoulême et en Charente pour proposer des
-                        programmes de qualité et adaptés aux besoins du marché, notamment pour les titres professionnels
-                        DWWM (Développeur Web et Web Mobile), CDA (Concepteur Développeur d'Applications), et CDUI
-                        (Concepteur Designer UI).
-                    </p>
-                    <p class="read-more"><a href="">En savoir plus sur les titres professionnels</a></p>
+                    <p>Mes compétences en développement web, en design, et en conception d'applications ont permis à mes apprenants d'acquérir des certifications valorisées sur le marché du travail. Je collabore étroitement avec des organismes de formation sur Angoulême et en Charente pour proposer des programmes de qualité et adaptés aux besoins du marché, notamment pour les titres professionnels DWWM (Développeur Web et Web Mobile), CDA (Concepteur Développeur d'Applications), et CDUI (Concepteur Designer UI).</p>
+                    <p class="read-more"><a href="#">En savoir plus sur les titres professionnels</a></p>
                 </div>
-
             </div>
         </section>
 
-        <section class="wrapper section-generale">
-            <h2 class="titre-section">
-                Les formations en entreprises
-            </h2>
+        <section class="wrapper section-generale" role="region" aria-labelledby="section-formations-entreprises">
+            <h2 id="section-formations-entreprises" class="titre-section">Les formations en entreprises</h2>
             <div class="contenu-section">
-
                 <div>
-                    <p>
-                        Mes compétences en développement web, en design, et en conception d'applications ont permis à
-                        mes apprenants d'acquérir des certifications valorisées sur le marché du travail. Je collabore
-                        étroitement avec des organismes de formation sur Angoulême et en Charente pour proposer des
-                        programmes de qualité et adaptés aux besoins du marché, notamment pour les titres professionnels
-                        DWWM (Développeur Web et Web Mobile), CDA (Concepteur Développeur d'Applications), et CDUI
-                        (Concepteur Designer UI).
-                    </p>
-                    <p class="read-more"><a href="">En savoir plus sur les titres professionnels</a></p>
+                    <p>Mes compétences en développement web, en design, et en conception d'applications ont permis à mes apprenants d'acquérir des certifications valorisées sur le marché du travail. Je collabore étroitement avec des organismes de formation sur Angoulême et en Charente pour proposer des programmes de qualité et adaptés aux besoins du marché, notamment pour les titres professionnels DWWM (Développeur Web et Web Mobile), CDA (Concepteur Développeur d'Applications), et CDUI (Concepteur Designer UI).</p>
+                    <p class="read-more"><a href="#">En savoir plus sur les titres professionnels</a></p>
                 </div>
-
             </div>
         </section>
 
-        <section class="wrapper section-generale">
-            <h2 class="titre-section">
-                Catalogue des formations courtes
-            </h2>
+        <section class="wrapper section-generale" role="region" aria-labelledby="section-catalogue-formations">
+            <h2 id="section-catalogue-formations" class="titre-section">Catalogue des formations courtes</h2>
             <div class="contenu-section">
-
                 <div>
-                    <p>
-                        Mes compétences en développement web, en design, et en conception d'applications ont permis à
-                        mes apprenants d'acquérir des certifications valorisées sur le marché du travail. Je collabore
-                        étroitement avec des organismes de formation sur Angoulême et en Charente pour proposer des
-                        programmes de qualité et adaptés aux besoins du marché, notamment pour les titres professionnels
-                        DWWM (Développeur Web et Web Mobile), CDA (Concepteur Développeur d'Applications), et CDUI
-                        (Concepteur Designer UI).
-                    </p>
-                    <p class="read-more"><a href="">En savoir plus sur les titres professionnels</a></p>
+                    <p>Mes compétences en développement web, en design, et en conception d'applications ont permis à mes apprenants d'acquérir des certifications valorisées sur le marché du travail. Je collabore étroitement avec des organismes de formation sur Angoulême et en Charente pour proposer des programmes de qualité et adaptés aux besoins du marché, notamment pour les titres professionnels DWWM (Développeur Web et Web Mobile), CDA (Concepteur Développeur d'Applications), et CDUI (Concepteur Designer UI).</p>
+                    <p class="read-more"><a href="#">En savoir plus sur les titres professionnels</a></p>
                 </div>
-
             </div>
         </section>
 
-        <section class="wrapper section-generale">
-            <h2 class="titre-section">
-                Papotages
-            </h2>
+        <section class="wrapper section-generale" role="region" aria-labelledby="section-papotages">
+            <h2 id="section-papotages" class="titre-section">Papotages</h2>
             <div class="contenu-section">
-
                 <div>
-                    <p>
-                        Mes compétences en développement web, en design, et en conception d'applications ont permis à
-                        mes apprenants d'acquérir des certifications valorisées sur le marché du travail. Je collabore
-                        étroitement avec des organismes de formation sur Angoulême et en Charente pour proposer des
-                        programmes de qualité et adaptés aux besoins du marché, notamment pour les titres professionnels
-                        DWWM (Développeur Web et Web Mobile), CDA (Concepteur Développeur d'Applications), et CDUI
-                        (Concepteur Designer UI).
-                    </p>
-                    <p class="read-more"><a href="">En savoir plus sur les titres professionnels</a></p>
+                    <p>Mes compétences en développement web, en design, et en conception d'applications ont permis à mes apprenants d'acquérir des certifications valorisées sur le marché du travail. Je collabore étroitement avec des organismes de formation sur Angoulême et en Charente pour proposer des programmes de qualité et adaptés aux besoins du marché, notamment pour les titres professionnels DWWM (Développeur Web et Web Mobile), CDA (Concepteur Développeur d'Applications), et CDUI (Concepteur Designer UI).</p>
+                    <p class="read-more"><a href="#">En savoir plus sur les titres professionnels</a></p>
                 </div>
-
             </div>
         </section>
 
-        <section class="wrapper section-generale">
-            <h2 class="titre-section">
-                Me contacter
-            </h2>
+        <section class="wrapper section-generale" role="region" aria-labelledby="section-contact">
+            <h2 id="section-contact" class="titre-section">Me contacter</h2>
             <div class="contenu-section">
-                <p>Vous avez besoin d’un formateur métier pour un titre professionnelle dans le digital sur le secteur
-                    d’Angoulême, de la Charente ou dans un département limitrophe, n’hésitez pas à me contacter ! </p>
+                <p>Vous avez besoin d’un formateur métier pour un titre professionnelle dans le digital sur le secteur d’Angoulême, de la Charente ou dans un département limitrophe, n’hésitez pas à me contacter ! </p>
                 <div class="flex justify-between align-start soussection">
                     <div class="col w48">
-                        <a href="tel:0761772382" class="tel cta">
+                        <a href="tel:0761772382" class="tel cta" aria-label="Téléphone">
                             <p>
                                 <img src="public/css/img/tel.png" alt="">
                                 <span>07 61 77 23 82</span>
                             </p>
                         </a>
-                        <form action="osef.php" method="post">
+                        <form id="contactForm" action="osef.php" method="post">
                             <div class="fields">
                                 <div class="field">
                                     <label for="nom">Nom (obligatoire)</label>
-                                    <input type="text" name="nom" id="nom" placeholder="Berners-Lee" required>
+                                    <input type="text" name="nom" id="nom" placeholder="Berners-Lee" required aria-required="true">
                                 </div>
                                 <div class="field">
                                     <label for="prenom">Prenom (obligatoire)</label>
-                                    <input type="text" name="prenom" id="prenom" placeholder="Tim" required>
+                                    <input type="text" name="prenom" id="prenom" placeholder="Tim" required aria-required="true">
                                 </div>
                                 <div class="field">
                                     <label for="raison_sociale">Raison sociale</label>
                                     <input type="text" name="raison_sociale" id="raison_sociale" placeholder="CERN">
                                 </div>
                                 <div class="field">
-                                    <label for="nom">Mail (obligatoire)</label>
-                                    <input type="email" name="mail" id="mail" placeholder="tim.berners-lee@home.cern"
-                                        required>
+                                    <label for="mail">Mail (obligatoire)</label>
+                                    <input type="email" name="mail" id="mail" placeholder="tim.berners-lee@home.cern" required aria-required="true">
                                 </div>
                                 <div class="field">
-                                    <label for="nom">Téléphone</label>
+                                    <label for="telephone">Téléphone</label>
                                     <input type="tel" name="telephone" id="telephone">
                                 </div>
                                 <div class="field">
                                     <label for="message">Votre message (obligatoire)</label>
-                                    <textarea name="message" id="message" required>
-
-                                    </textarea>
+                                    <textarea name="message" id="message" required aria-required="true"></textarea>
                                 </div>
-
                             </div>
                             <div class="submit">
                                 <div>
-                                    <input type="checkbox" name="accept" id="accept">
-                                    <label for="accept">En envoyant ce formulaire de contact, j'accepte <a href="">
-                                            politique de confidentialité</a></label>
+                                    <input type="checkbox" name="accept" id="accept" required aria-required="true">
+                                    <label for="accept">En envoyant ce formulaire de contact, j'accepte <a href="#">la politique de confidentialité</a></label>
                                 </div>
                                 <div>
                                     <input type="submit" value="Envoyer">
@@ -229,13 +186,13 @@
                             </div>
                         </form>
                     </div>
-                    <section class="col  w48 order1">
-                        <h3 class="titre-soussection">Quelques recommandations</h3>
+                    <section class="col  w48 order1" role="region" aria-labelledby="section-recommendations">
+                        <h3 id="section-recommendations" class="titre-soussection">Quelques recommandations</h3>
                         <div class="recommanations">
                             <section class="recommandation">
                                 <header class="recommandation-header flex align-start">
                                     <div class="profil">
-                                        <img src="public/images/aya.webp" alt="" width="48" height="48">
+                                        <img src="public/images/aya.webp" alt="Profil d'Aya ALFITIANY" width="48" height="48">
                                     </div>
                                     <h4 class="titre-paragraphe">
                                         <span class="nom">Aya ALFITIANY</span>
@@ -243,20 +200,14 @@
                                     </h4>
                                 </header>
                                 <div class="recommandation-content">
-                                    <p>
-                                        David a été mon formateur pendant la formation de développement web et web
-                                        mobile à CCI OpenLab. <br>
-                                        C’était une année plein de réalisations et de réussites grâce à David. <br>
-                                        Il est toujours là quand on a besoin de lui, il nous encourage toujours et il
-                                        nous donne fait confiance et c'est ce qui fait de lui le meilleur formateur.</p>
+                                    <p>David a été mon formateur pendant la formation de développement web et web mobile à CCI OpenLab.<br>C’était une année plein de réalisations et de réussites grâce à David.<br>Il est toujours là quand on a besoin de lui, il nous encourage toujours et il nous donne fait confiance et c'est ce qui fait de lui le meilleur formateur.</p>
                                     <p> Merci David !!</p>
                                 </div>
-
                             </section>
                             <section class="recommandation">
                                 <header class="recommandation-header flex align-start">
                                     <div class="profil">
-                                        <img src="public/images/guuillaume.webp" alt="" width="48" height="48">
+                                        <img src="public/images/guuillaume.webp" alt="Profil de Renaud BERNARD" width="48" height="48">
                                     </div>
                                     <h4 class="titre-paragraphe">
                                         <span class="nom">Renaud BERNARD</span>
@@ -264,49 +215,40 @@
                                     </h4>
                                 </header>
                                 <div class="recommandation-content">
-                                    <p>
-                                        J'ai le plaisir de recommander David Legrand en  tant que formateur dans le domaine du développement d'applications.  J'ai eu le privilège de participer à la formation "Concepteur  Développeur D'application" dispensée par David, et son expertise ainsi  que son engagement envers l'excellence andragogie sont véritablement  impressionnants.</p>
-                                    <p> 
-                                        David démontre une profonde connaissance des  langages de programmation et des frameworks actuels, mais ce qui le  distingue vraiment en tant que formateur, c'est sa capacité à simplifier  des concepts complexes. Ses explications claires et ses exemples  pratiques rendent l'apprentissage du développement d'applications  accessible et stimulant. David ne se contente pas d'enseigner la  théorie; il met également l'accent sur l'application pratique. Les  exercices pratiques et les projets qu'il propose sont pertinents et  stimulants...
-                                    </p>
+                                    <p>J'ai le plaisir de recommander David Legrand en tant que formateur dans le domaine du développement d'applications. J'ai eu le privilège de participer à la formation "Concepteur Développeur D'application" dispensée par David, et son expertise ainsi que son engagement envers l'excellence andragogie sont véritablement impressionnants.</p>
+                                    <p> David démontre une profonde connaissance des langages de programmation et des frameworks actuels, mais ce qui le distingue vraiment en tant que formateur, c'est sa capacité à simplifier des concepts complexes. Ses explications claires et ses exemples pratiques rendent l'apprentissage du développement d'applications accessible et stimulant. David ne se contente pas d'enseigner la théorie; il met également l'accent sur l'application pratique. Les exercices pratiques et les projets qu'il propose sont pertinents et stimulants...</p>
                                 </div>
-
                             </section>
                         </div>
                         <div class="readmore"><a href="https://www.linkedin.com/in/labarbepousse/#recommendations">Voir toutes les recommandations Linkedin</a></div>
                     </section>
                 </div>
             </div>
-
-
         </section>
-        
     </main>
-    <footer id="footer">
-        <nav class="menus-footer">
+    <footer id="footer" role="contentinfo">
+        <nav aria-label="Menu de pied de page">
             <ul class="menu">
                 <li class="item titres-pro"><a href="#">Titres professionnels</a></li>
                 <li class="item formations-courtes"><a href="#">Formations courtes</a></li>
                 <li class="item formations-salaries"><a href="#">Formations en entreprise</a></li>
             </ul>
             <ul class="menu">
-                <li class="item"><a href="">Plan du site</a></li>
-                <li class="item"><a href="">Contact</a></li>
-                <li class="item"><a href="">Mentions légales</a></li>
+                <li class="item"><a href="#">Plan du site</a></li>
+                <li class="item"><a href="#">Contact</a></li>
+                <li class="item"><a href="#">Mentions légales</a></li>
             </ul>
-
             <ul class="menu rs">
                 <li class="item"><a href="tel:0761772382">O7 61 77 23 82</a></li>
                 <li class="item"><a href="https://www.linkedin.com/in/labarbepousse">
                     <img src="public/images/likedin.png" alt="linkedin" width="32" height="32">
                 </a></li>
             </ul>
-           
         </nav>
     </footer>
-
+    <!--il faudra en production créer un seul fichier et minifier-->
     <script src="public/js/index.js"></script>
-
+    <script src="public/js/formValid.js"></script>
 </body>
 
 </html>
